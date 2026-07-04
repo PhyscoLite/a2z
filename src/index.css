@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Custom Scrollbar for horizontal scrolling */
+.hide-scrollbar::-webkit-scrollbar {
+  height: 2px;
+}
+
+.hide-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 2px;
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #E20000; /* Tailwind orange-600 */
+}
+
+/* For Firefox */
+.hide-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #333333 transparent;
+}
+
+/* Google Translate Overrides */
+body {
+  top: 0px !important;
+  position: static !important;
+}
+.skiptranslate iframe {
+  display: none !important;
+}
+#goog-gt-tt, .goog-te-balloon-frame {
+  display: none !important;
+}
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* Mobile App Optimizations */
+html, body {
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+button, a {
+  touch-action: manipulation;
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

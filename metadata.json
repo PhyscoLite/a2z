@@ -1,0 +1,6 @@
+{
+  "name": "MotorLia",
+  "description": "Find Exceptional Cars, Perfectly Priced. Discover carefully selected vehicles from trusted dealers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
